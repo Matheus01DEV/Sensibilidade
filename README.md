@@ -37,27 +37,17 @@ Desenvolvido após **6 anos de estudo** em programação Android, Kernel Linux, 
 # https://f-droid.org/packages/com.termux/
 ```
 
-### 2. Instalar Termux-ADB
+### 2. Instalar ADB
 ```bash
 # Atualize os repositórios
-pkg update && pkg upgrade -y
-
-#usar termux-adb 
-curl -s https://raw.githubusercontent.com/nohajc/termux-adb/master/install.sh | bash
-
-
-### 3. Configurar Alias (Opcional)
-```bash
-# Adicione alias ao .bashrc para usar 'termux-adb' como comando
-echo "alias termux-adb='adb'" >> ~/.bashrc
-
-# Recarregue o .bashrc
-source ~/.bashrc
-
-# Agora você pode usar:
-termux-adb devices
-```
-
+pkg update && pkg upgrade && pkg install android-tools -y
+# Agora você pode testar
+adb
+### 3. Conectar via WIFI ###
+adb pair SEUIP:PORTA
+COLOQUE O CÒDIGO DE 6 DIGITOS
+adb connect SEUIP:PORTA
+adb devices
 ### 4. Baixar e Instalar MTS_SENSI.sh
 ```bash
 # Clone o repositório
